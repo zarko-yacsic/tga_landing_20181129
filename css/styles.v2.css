@@ -1,0 +1,400 @@
+/* Importar fuentes... */
+@font-face { font-family: AvenirNextRegular; src: url(../fonts/AvenirNext-Regular.ttf);}
+@font-face { font-family: AvenirNextBold; src: url(../fonts/AvenirNext-Bold.ttf);}
+@font-face { font-family: AvenirNextDemiBold; src: url(../fonts/AvenirNext-DemiBold.ttf);}
+@font-face { font-family: NexaBold; src: url(../fonts/Nexa-Bold.ttf);}
+@font-face { font-family: OpenSansRegular; src: url(../fonts/OpenSans-Regular.ttf);}
+@font-face { font-family: OpenSansBold; src: url(../fonts/OpenSans-Bold.ttf);}
+
+
+/* Estilos personalizados... */
+body {
+	background-color: #333333;
+	background-image: url('../img/base/img_fondo.png');
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	background-size: 100%;
+}
+
+/* - Cabecera - */
+header { padding: 20px; margin: 0px 0px 0px 0px !important; width: 100%;}
+header h1 {
+	background-image: url('https://s3-us-west-1.amazonaws.com/tgaspa/tga_landing/image_base/logotipo_TGA.svg');
+	background-repeat: no-repeat;
+	display:inline-block;
+	margin: 10px 0px 0px 20px;
+}
+header h1 span { text-indent: -999999px; display: block; width: 200px; height: 92px;}
+
+
+/* - Título - */
+section.info1 { width: 100%;}
+section.info1 h2 {
+	font-family: AvenirNextDemiBold, Arial, Helvetica, sans-serif;
+	font-size: 62px;
+	text-align: center;
+	color: #FFFFFF;
+	margin-bottom: 40px;
+}
+
+
+/* - Textos informativos - */
+section.info2 {
+	color: #FFFFFF;
+	margin: 0px auto 30px auto;
+}
+section.info2 div.col-md-4 { border-right: 1px solid #999999;}
+section.info2 div.col-md-4:last-of-type { border-right: none !important;}
+section.info2 div.col-md-4 > span,
+section.info2 div.col-md-4 > p {
+	font-family: AvenirNextDemiBold, Arial, Helvetica, sans-serif;
+	display: block;
+	float: left;
+}
+section.info2 div.col-md-4 > p { line-height: 1.3em;}
+section.info2 span.plus_sign {
+	background-image: url('https://s3-us-west-1.amazonaws.com/tgaspa/tga_landing/image_base/icono_mas.svg');
+	background-repeat: no-repeat;
+	text-indent: -99999px;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+section.info2 span.big_number {
+	font-family: NexaBold, Arial, Helvetica, sans-serif !important;
+	font-size: 62px;
+	margin: 0px 8px 0px 0px;
+	padding: 0px;
+	line-height: 1.0em;
+}
+section.info2 .col-md-4:nth-of-type(1) > p { width: 160px;}
+section.info2 .col-md-4:nth-of-type(2) > p { width: 180px;}
+section.info2 .col-md-4:nth-of-type(3) > p { width: 190px;}
+section.info2 span.cyan_text { color: #00ebda;}
+
+
+/* - Slider empresas - */
+section.slider { margin: 0px auto 20px auto;}
+section.slider > div.carousel > .carousel-inner { display: none;}
+section.slider > div.carousel > .carousel-inner > .carousel-item > .row { padding-left: 5%;}
+section.slider > div.carousel > .carousel-inner > .carousel-item > .row > div.logo-bgcolor { background-color: #FFFFFF;}
+section.slider > div.carousel > .carousel-inner > .carousel-item > .row > div.logo-container {
+	display: block;
+	float: left;
+	margin: 0px 6px 6px 0px;
+}
+section.slider > div.carousel > .carousel-inner > .carousel-item > .row > div.logo-container:last-of-type { margin-right: 0px !important;}
+section.slider > div.carousel > .carousel-inner > .carousel-item > .row > div.logo-container > img {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%); 
+}
+section.slider > div.carousel > .carousel-inner > .carousel-item > .row > div.logo-container > img:hover {
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-ms-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+	filter: grayscale(0%); 
+}
+
+section.slider > div.carousel > .carousel-indicators { top:103%;}
+section.slider > div.carousel > .carousel-indicators > li {
+	border-radius: 12px;
+	width: 12px;
+	height: 12px;
+	background-color: #FFFFFF;
+	margin-right: 5px;
+}
+section.slider > div.carousel > ul.carousel-indicators > .active { background-color: #888888 !important;}
+
+
+/* - Texto inferior - */
+section.info3 { padding: 20px; margin: 0px auto 20px auto;}
+section.info3 p {
+	font-family: AvenirNextDemiBold, Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	text-align: center;
+	line-height: 1.2em;
+	color: #FFFFFF;
+}
+
+
+/* - Pie de página - */
+footer {
+	font-family: OpenSansRegular, Arial, Helvetica, sans-serif;
+	font-weight: lighter;
+	background-color: #333333;
+	text-align: center;
+	font-size: 16px;
+	padding: 20px;
+	height: 170px;
+}
+footer p { color: #FFFFFF;	margin-bottom: 15px}
+footer p > a.a-mailto { font-family: OpenSansBold, Arial, Helvetica, sans-serif;}
+footer p > a { color: #FFFFFF;}
+footer p > a:hover { color: #CCCCCC; text-decoration: none;}
+footer > div > div:nth-of-type(3){ margin-bottom: 20px;}
+footer > div > div:nth-of-type(3) > a.a-linkedin > img { border:0px none !important; width: 28px; height: 28px; margin-bottom: 20px;}
+
+
+/* - MEDIA QUERIES - */
+@media only screen and (min-width : 1224px) and (orientation:landscape) {
+	section.info2 { width: 1000px;}
+	section.info2 div.col-md-4 > p { font-size: 24px;}
+	section.info2 div.col-md-4:nth-of-type(1) > p { width: 130px;}
+	section.info2 div.col-md-4:nth-of-type(2) > p { width: 180px;}
+	section.info2 div.col-md-4:nth-of-type(3) > p { width: 180px;}
+	section.info2 .plus_sign { width: 30px; height: 30px;}
+	section.info2 .big_number { font-size: 68px;}
+	section.slider { width: 1220px;}
+}
+
+
+@media only screen and (min-width : 1024px) and (max-width : 1223px) and (orientation:landscape) {
+	body { background-size: 125%;}
+	section.info2 { width: 960px;}
+	section.info2 div.col-md-4 > p { font-size: 18px;}
+	section.info2 div.col-md-4:nth-of-type(1) > p { width: 140px;}
+	section.info2 div.col-md-4:nth-of-type(2) > p { width: 175px;}
+	section.info2 div.col-md-4:nth-of-type(3) > p { width: 180px;}
+	section.info2 .plus_sign { width: 24px; height: 24px;}
+	section.info2 .big_number { font-size: 54px !important;}
+	section.slider { width: 100%;}
+	section.info3 p { font-size: 24px !important; line-height: 1.4em;}
+}
+
+
+@media only screen and (min-width : 768px) and (max-width : 1023px) and (orientation:landscape) {
+	body { background-size: 140%;}
+	header h1 span { width: 160px; height: 74px;}
+	section.info1 h2 { font-size: 52px; margin-bottom: 25px;}
+	section.info2 { width: 720px; margin-bottom: 20px;}
+	section.info2 div.col-md-4 > p { font-size: 18px;}
+	section.info2 div.col-md-4:nth-of-type(1) > p { width: 100px;}
+	section.info2 div.col-md-4:nth-of-type(2) > p { width: 135px;}
+	section.info2 div.col-md-4:nth-of-type(3) > p { width: 135px;}
+	section.info2 .plus_sign { width: 24px !important; height: 24px !important;}
+	section.info2 .big_number { font-size: 54px !important;}
+	section.slider { width: 95%;}
+	section.info3 { margin-bottom: 0px;}
+	section.info3 p { font-size: 20px !important; line-height: 1.2em;}
+	footer { font-size: 14px;}
+}
+
+
+@media only screen and (min-width : 620px) and (max-width : 767px) and (orientation:landscape) {
+	body { background-size: 145%;}
+	header h1 span { width: 130px; height: 60px;}
+	section.info1 h2 { font-size: 42px; margin-bottom: 25px;}
+	section.info2 { width: 570px; margin-bottom: 20px;}
+	section.info2 div.col-md-4 > p { font-size: 14px;}
+	section.info2 div.col-md-4:nth-of-type(1) > p { width: 75px;}
+	section.info2 div.col-md-4:nth-of-type(2) > p { width: 100px;}
+	section.info2 div.col-md-4:nth-of-type(3) > p { width: 105px;}
+	section.info2 .plus_sign { width: 16px !important; height: 16px !important;}
+	section.info2 .big_number { font-size: 42px !important;}
+	section.slider { width: 95%;}
+	section.info3 { margin-bottom: 0px;}
+	section.info3 p { font-size: 18px !important; line-height: 1.2em; margin-bottom: 10px;}
+	footer { font-size: 14px;}
+}
+
+
+@media only screen and (min-width : 420px) and (max-width : 619px) and (orientation:landscape) {
+	body { background-size: 145%;}
+	header { text-align: center !important;}
+	header h1 span { width: 130px; height: 60px;}
+	section.info1 h2 { font-size: 40px; margin-bottom: 25px;}
+	section.info2 { width: 400px; margin-bottom: 20px;}
+	section.info2 div.col-md-4 > p { font-size: 14px;}
+	section.info2 div.col-md-4:nth-of-type(1) > p { width: 100px;}
+	section.info2 div.col-md-4:nth-of-type(2) > p { width: 120px;}
+	section.info2 div.col-md-4:nth-of-type(3) > p { width: 120px;}
+	section.info2 .plus_sign { width: 16px !important; height: 16px !important;}
+	section.info2 .big_number { font-size: 42px !important;}
+	section.slider { width: 93%;}
+	section.info3 { margin-bottom: 0px;}
+	section.info3 p { font-size: 16px !important; line-height: 1.2em; margin-bottom: 0px;}
+	footer { font-size: 12px;}
+}
+
+
+@media only screen and (min-width : 300px) and (max-width : 419px) and (orientation:landscape) {
+	body { background-size: 160%;}
+	header { text-align: center !important;}
+	header h1 span { width: 130px; height: 60px;}
+	section.info1 h2 { font-size: 40px; margin-bottom: 25px;}
+	section.info2 { margin-bottom: 20px;}
+	section.info2 div.col-md-4 > p { font-size: 14px;}
+	section.info2 div.col-md-4:nth-of-type(1) > p { width: 100px;}
+	section.info2 div.col-md-4:nth-of-type(2) > p { width: 120px;}
+	section.info2 div.col-md-4:nth-of-type(3) > p { width: 120px;}
+	section.info2 .plus_sign { width: 16px !important; height: 16px !important;}
+	section.info2 .big_number { font-size: 42px !important;}
+	section.slider { width: 93%;}
+	section.info3 { margin-bottom: 0px;}
+	section.info3 p { font-size: 16px !important; line-height: 1.2em; margin-bottom: 0px;}
+	footer { font-size: 12px;}
+}
+
+
+@media all and (orientation:landscape) {
+	section.info2 div.col-md-4 { width: 33%;}
+}
+
+
+@media only screen and (min-width : 1224px) and (orientation:portrait) {
+	body { background-size: 150%;}
+	header { text-align: center !important;}
+	header h1 span { width: 200px; height: 92px;}
+	section.info1 h2 { font-size: 52px; margin-bottom: 35px;}
+	section.info2 { width: 645px;}
+	section.info2 div.col-md-4 { border-right: 1px solid #999999;}
+	section.info2 div.col-md-4:last-of-type { border-right: none !important;}
+	section.info2 div.col-md-4 > p { font-size: 16px;}
+	section.info2 div.col-md-4:nth-of-type(1) > p { width: 95px;}
+	section.info2 div.col-md-4:nth-of-type(2) > p { width: 115px;}
+	section.info2 div.col-md-4:nth-of-type(3) > p { width: 115px;}
+	section.info2 .plus_sign { width: 16px !important; height: 16px !important;}
+	section.info2 .big_number { font-size: 42px !important;}
+	section.slider { width: 690px;}
+	section.info3 p { font-size: 28px !important; line-height: 1.2em;}
+	footer { font-size: 16px;}
+}
+
+
+@media only screen and (min-width : 1024px) and (max-width : 1223px) and (orientation:portrait) {
+	body { background-size: 170%;}
+	header { text-align: center !important;}
+	header h1 span { width: 200px; height: 92px;}
+	section.info1 h2 { font-size: 52px; margin-bottom: 35px;}
+	section.info2 { width: 645px;}
+	section.info2 div.col-md-4 { border-right: 1px solid #999999;}
+	section.info2 div.col-md-4:last-of-type { border-right: none !important;}
+	section.info2 div.col-md-4 > p { font-size: 16px;}
+	section.info2 div.col-md-4:nth-of-type(1) > p { width: 95px;}
+	section.info2 div.col-md-4:nth-of-type(2) > p { width: 115px;}
+	section.info2 div.col-md-4:nth-of-type(3) > p { width: 115px;}
+	section.info2 .plus_sign { width: 16px !important; height: 16px !important;}
+	section.info2 .big_number { font-size: 42px !important;}
+	section.slider { width: 690px;}
+	section.info3 p { font-size: 28px !important; line-height: 1.2em;}
+	footer { font-size: 16px;}
+}
+
+
+
+@media only screen and (min-width : 768px) and (max-width : 1023px) and (orientation:portrait) {
+	body { background-size: 270%;}
+	header { text-align: center !important;}
+	header h1 span { width: 160px; height: 74px;}
+	section.info1 h2 { font-size: 42px; margin-bottom: 30px;}
+	section.info2 { width: 645px;}
+	section.info2 div.col-md-4 { border-right: 1px solid #999999;}
+	section.info2 div.col-md-4:last-of-type { border-right: none !important;}
+	section.info2 div.col-md-4 > p { font-size: 16px;}
+	section.info2 div.col-md-4:nth-of-type(1) > p { width: 95px;}
+	section.info2 div.col-md-4:nth-of-type(2) > p { width: 115px;}
+	section.info2 div.col-md-4:nth-of-type(3) > p { width: 115px;}
+	section.info2 .plus_sign { width: 16px !important; height: 16px !important;}
+	section.info2 .big_number { font-size: 42px !important;}
+	section.slider { width: 690px;}
+	section.info3 p { font-size: 20px !important; line-height: 1.2em;}
+	footer { font-size: 14px;}
+}
+
+
+@media only screen and (min-width : 620px) and (max-width : 767px) and (orientation:portrait) {
+	body { background-size: 270%;}
+	header { text-align: center !important;}
+	header h1 span { width: 130px; height: 60px;}
+	section.info1 h2 { font-size: 34px; margin-bottom: 30px;}
+	section.info2 { width: 300px;}
+	section.info2 div.col-md-4 { border-right: none !important;}
+	section.info2 div.col-md-4 > p { font-size: 18px;}
+	section.info2 div.col-md-4:nth-of-type(1) > p { width: 140px;}
+	section.info2 div.col-md-4:nth-of-type(2) > p { width: 185px;}
+	section.info2 div.col-md-4:nth-of-type(3) > p { width: 185px;}
+	section.info2 .plus_sign { width: 20px !important; height: 20px !important;}
+	section.info2 .big_number { font-size: 48px !important;}
+	section.slider { width: 90%;}
+	section.info3 p { font-size: 20px !important; line-height: 1.2em;}
+	footer { font-size: 14px;}
+}
+
+
+@media only screen and (min-width : 420px) and (max-width : 619px) and (orientation:portrait){
+	body { background-size: 340%;}
+	header { text-align: center !important;}
+	header h1 span { width: 130px; height: 60px;}
+	section.info2 { width: 270px;}
+	section.info1 h2 { font-size: 34px; margin-bottom: 30px;}
+	section.info2 div.col-md-4 { border-right: none !important;}
+	section.info2 div.col-md-4 > p { font-size: 14px;}
+	section.info2 div.col-md-4:nth-of-type(1) > p { width: 100px;}
+	section.info2 div.col-md-4:nth-of-type(2) > p { width: 165px;}
+	section.info2 div.col-md-4:nth-of-type(3) > p { width: 165px;}
+	section.info2 .plus_sign { width: 16px !important; height: 16px !important;}
+	section.info2 .big_number { font-size: 42px !important;}
+	section.slider { width: 90%;}
+	section.info3 p { font-size: 14px !important; line-height: 1.2em; margin-bottom: 0px;}
+	footer { font-size: 12px;}
+}
+
+
+@media only screen and (min-width : 300px) and (max-width : 419px) and (orientation:portrait) {
+	body { background-size: 440%;}
+	header { text-align: center !important;}
+	header h1 span { width: 130px; height: 60px;}
+	section.info1 h2 { font-size: 26px; margin-bottom: 30px;}
+	section.info2 { width: 270px;}
+	section.info2 div.col-md-4 { border-right: none !important;}
+	section.info2 div.col-md-4 > p { font-size: 14px;}
+	section.info2 div.col-md-4:nth-of-type(1) > p { width: 100px;}
+	section.info2 div.col-md-4:nth-of-type(2) > p { width: 165px;}
+	section.info2 div.col-md-4:nth-of-type(3) > p { width: 165px;}
+	section.info2 .plus_sign { width: 16px !important; height: 16px !important;}
+	section.info2 .big_number { font-size: 42px !important;}
+	section.slider { width: 90%;}
+	section.info3 p { font-size: 14px !important; line-height: 1.2em; margin-bottom: 0px;}
+	footer { font-size: 12px;}
+}
+
+
+@media only screen and (min-width : 1px) and (max-width : 299px) and (orientation:portrait) {
+	body { background-size: 410% !important;}
+	header { text-align: center !important; width: 299px !important;}
+	header h1 span { width: 130px; height: 60px;}
+	section.info1 { text-align: center !important;}
+	section.info1 h2 { font-size: 26px; margin-bottom: 25px;}
+	section.info2 { width: 270px; margin-bottom: 20px;}
+	section.info2 div.row { margin: 0px !important;}
+	section.info2 div.col-md-4 { width: initial; border-right: none !important; margin-bottom: 0px;}
+	section.info2 div.col-md-4:nth-of-type(3) { margin-bottom: 0px;}
+	section.info2 div.col-md-4 > p { font-size: 14px;}
+	section.info2 div.col-md-4:nth-of-type(1) > p { width: 100px;}
+	section.info2 div.col-md-4:nth-of-type(2) > p { width: 165px;}
+	section.info2 div.col-md-4:nth-of-type(3) > p { width: 165px;}
+	section.info2 .plus_sign { width: 16px !important; height: 16px !important;}
+	section.info2 .big_number { font-size: 42px !important;}
+	section.info1 h2,
+	section.slider,
+	section.info3,
+	footer { width: 270px !important; margin-left: auto; margin-right: auto;}
+	section.info3 p { font-size: 14px !important; line-height: 1.2em; margin-bottom: 0px;}
+	footer { font-size: 12px;}
+}
+
+
+@media all and (orientation:portrait) {
+	section.info1 { text-align: center !important;}
+	section.info1 h2 { display: inline-block !important;}
+	section.info2 div.row { margin: 0px !important;}
+	section.info2 div.col-md-4 { width: initial; margin-bottom: 0px;}
+	section.info2 div.col-md-4:nth-of-type(3) { margin-bottom: 0px;}
+	section.info3 { margin-bottom: 0px;}
+}
