@@ -13,14 +13,15 @@
     <meta property="og:image" content="https://s3-us-west-1.amazonaws.com/tgaspa/tga_landing/image_base/logotipo_TGA_og.jpg" />
     <meta property="og:description" content="Somos una empresa PropTech, especialista en conocimiento del consumidor inmobiliario" />
     <link href="https://s3-us-west-1.amazonaws.com/tgaspa/tga_landing/image_base/favicon.ico" rel="shortcut icon" />
-    <style type="text/css">header, section, footer { display: none;} body { background-color: #333333;}</style>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.v2.css" rel="stylesheet">
 </head>
-<body id="page-top">
+<body id="page-top" style="background-color: #333333; display: none;">
     <header id="tga-header">
         <h1><span>TGA</span></h1>
     </header>
     <section class="info1">
-        <h2 class="subtitulo">sitio en construcción</h2>
+        <h2 class="subtitulo">sitio en renovación</h2>
     </section>
     <section class="info2">
         <div class="row">
@@ -41,21 +42,15 @@
             </div>
         </div>
     </section>
-
-    
     <section class="slider">
         <div id="carousel_logos" class="carousel slide" data-ride="carousel" data-interval="false">
             <ul class="carousel-indicators"></ul>
             <div class="carousel-inner"></div>
         </div>
     </section>
-    
-    
     <section class="info3">
         <p>Somos especialistas en conocimiento<br> del consumidor inmobiliario</p>
     </section>
-    
-    
     <footer>
         <div class="row d-flex h-100">
             <div class=" col-md-1"></div>
@@ -73,8 +68,7 @@
 <script src="lib/jquery-3.3.1.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script>
-function generateCarousel(type){
-    var cols = 0, rows = 0, images = ["logo_armasDoomo.png","logo_aconcagua.png","logo_aitue.png","logo_imagina.png","logo_almahue.png","logo_bricsa.png",
+var images = ["logo_armasDoomo.png","logo_aconcagua.png","logo_aitue.png","logo_imagina.png","logo_almahue.png","logo_bricsa.png",
         "logo_convet.png","logo_senda.png","logo_echeverria.png","logo_elqui.png","logo_exxacon.png","logo_gespania.png","logo_creo.png",
         "logo_gimax.png","logo_icg.png","logo_iHabita.png","logo_inmobilia.png","logo_actualColombia.png","logo_inmSerena.png","logo_isa.png",
         "logo_centenario.png","logo_maestra.png","logo_moller.png","logo_norteVerde.png","logo_security.png","logo_sSilva.png","logo_terracorp.png",
@@ -86,16 +80,17 @@ function generateCarousel(type){
         "logo_nollagam.png","logo_numancia.png","logo_puertoCapital.png","logo_py.png","logo_sencorp.png","logo_siena.png","logo_socovesa.png",
         "logo_suksa.png","logo_umbrales.png","logo_madesal.png"];
 
+function generateCarousel(type){
+$("#carousel_logos div.carousel-inner").css('display', 'none');
+var cols = 0, rows = 0, img_str = '', nav_item = '', dir_img = 'img/inmobiliarias/';
     if(type == 'desktop'){ cols = 7; rows = 3;}
     if(type == 'mobile'){ cols = 3; rows = 5;}
-    $("#carousel_logos div.carousel-inner").css('display', 'none');
+var n_images = parseInt(images.length);
+var x_page = parseInt(cols * rows);
+var x_page_last = n_images % x_page;
+var n_pages = Math.ceil(n_images / x_page);
+var _i = 0; var _p = 0; var _r = 0; var _c = 0;
 
-    var n_images = parseInt(images.length); var img_str = '';
-    var x_page = parseInt(cols * rows);
-    var x_page_last = n_images % x_page;
-    var n_pages = Math.ceil(n_images / x_page);
-    var _i = 0; var _p = 0; var _r = 0; var _c = 0;
-    
     while(_i < n_images){
         while(_p < n_pages){
             img_str += '<div class="carousel-item';
@@ -105,8 +100,8 @@ function generateCarousel(type){
                 img_str += '<div class="row">';
                 for(_c = 0; _c < cols; _c++){
                     img_str += '<div class="logo-container';
-                    if(images[_i]){ img_str += ' logo-bgcolor"><img src="img/inmobiliarias/' + images[_i] + '"';}
-                    else{ img_str += '"><img src="img/inmobiliarias/logo_vacio.png"';}
+                    if(images[_i]){ img_str += ' logo-bgcolor"><img src="' + dir_img + images[_i] + '"';}
+                    else{ img_str += '"><img src="' + dir_img + 'logo_vacio.png"';}
                     img_str += ' class="img-fluid" /></div>';
                     _i = _i + 1;
                 }
@@ -116,8 +111,6 @@ function generateCarousel(type){
             _p = _p + 1;
         }
     }
-
-    var nav_item;
     $('#carousel_logos ul.carousel-indicators li').remove();
     for(var u=0; u < n_pages; u++){
             nav_item = '<li data-target="#carousel_logos" data-slide-to="' + u + '"';
@@ -125,7 +118,6 @@ function generateCarousel(type){
             nav_item += '></li>';
             $('#carousel_logos ul.carousel-indicators').append(nav_item);
     }
-    
     $('#carousel_logos div.carousel-inner div.carousel-item').remove();
     $('#carousel_logos div.carousel-inner').html(img_str).promise().done(function(){
         if(type == 'desktop'){
@@ -142,18 +134,9 @@ function generateCarousel(type){
 }
 
 function redimLogos(){
-var e = window,
-    n = document,
-    o = n.documentElement,
-    s = n.getElementsByTagName("body")[0],
-    w = e.innerWidth || o.clientWidth || s.clientWidth,
-    h = e.innerHeight || o.clientHeight || s.clientHeight;
-    if(parseInt(w) > parseInt(h)){
-        generateCarousel('desktop');
-    }
-    else{
-        generateCarousel('mobile');
-    }
+var w = window.innerWidth || n.documentElement.clientWidth || n.getElementsByTagName("body")[0].clientWidth,
+    h = window.innerHeight || n.documentElement.clientHeight || n.getElementsByTagName("body")[0].clientHeight;
+    (parseInt(w) > parseInt(h)) ? generateCarousel('desktop') : generateCarousel('mobile');
 }
 
 $(document).ready(function(){
@@ -162,19 +145,15 @@ $(document).ready(function(){
 $(window).resize(function(){
     redimLogos();
 });
-
-if (document.readyState == 'loading') {
+if(document.readyState == 'loading'){
     document.addEventListener("DOMContentLoaded", function(){
-        $("header, section, footer").css('display', 'none');
+        $("body").css('display', 'none');
     });
 }
 
 window.onload = function(){
-    $("header, section, footer").css('display', 'block');
-    
+    $("body").css('display', 'block');
 }
 </script>
-<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="css/styles.v2.css" rel="stylesheet">
 </body>
 </html>
